@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    background-color: #FAFAFA;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 65%);
+}
+
+.progress-bars {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.progress-bar {
+    min-height: 40px;
+    margin: 20px;
+    background-color: #EBEBEB;
+    border-radius: 100px;
+}
+
+@media only screen and (min-width: 600px) {
+    .progress-bar {
+        margin: 20px 40px;
+    }
+}
+
+.progressing-bar {
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    min-width: 50px;
+    min-height: inherit;
+    width: 1%; /* remove later */
+    border-radius: inherit;
+    padding: 2px;
+}
+
+.progressing-bar-fill {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    min-height: inherit;
+    border-radius: inherit;
+}
+
+.progress-label {
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: min(20%, 20px);
+    vertical-align: center;
+}
+
+.progressing-bar.green {
+    background: linear-gradient(#95B961, #728C4B);
+}
+
+.progressing-bar.green .progressing-bar-fill {
+    background: linear-gradient(#CDE99E, #98CC4E);
+    /* background: linear-gradient(90deg, rgba(100, 0, 0, 50%) 50%, rgba(0, 0, 100, 50%) 50%);
+    background-size: 3%;
+    overflow: hidden; */
+}
+
+/* .progressing-bar.green .progressing-bar-fill::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    /* background: linear-gradient(90deg, rgba(100, 0, 0, 50%) 50%, rgba(0, 0, 100, 50%) 50%); */
+    /* background: red;
+    transform: rotate(-30deg);
+} */
+
+.progressing-bar.red {
+    background: linear-gradient(#D37D6E, #A53C36);
+}
+
+.progressing-bar.red .progressing-bar-fill {
+    background: linear-gradient(#FFACA1, #F37664);
+}
+
+.progressing-bar.white {
+    background: linear-gradient(#C5C5C5, #B0B0B0);
+}
+
+.progressing-bar.white .progressing-bar-fill {
+    background: white;
+}
+
+.progressing-bar.blue {
+    background: linear-gradient(#7DB0CF, #4888B4);
+}
+
+.progressing-bar.blue .progressing-bar-fill {
+    background: linear-gradient(#B7DFF8, #79BDE4);
+}
+
+.progressing-bar.yellow {
+    background: linear-gradient(#D1AE50, #B28937);
+}
+
+.progressing-bar.yellow .progressing-bar-fill {
+    background: linear-gradient(#FFDB76, #F5C758);
+}
+
+.btn {
+    min-height: 32px;
+    min-width: 80px;
+    background-color: rgb(215, 180, 218);
+    border: 2px solid rgb(108, 36, 115);
+    border-radius: 100px;
+    margin: 20px 40px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(108, 36, 115);
+    border: 2px solid rgb(215, 180, 218);
+    color: white;
+}
